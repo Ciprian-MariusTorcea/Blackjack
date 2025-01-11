@@ -11,6 +11,9 @@ class Game {
 public:
     Game();             // Constructor care inițializează jocul și pachetul de cărți
     void play();        // Metoda principală pentru a juca o rundă de Blackjack
+    Player& getPlayer();   // Getter pentru jucător
+    Player& getDealer();   // Getter pentru dealer
+
 
 private:
     Deck deck;          // Pachetul de cărți

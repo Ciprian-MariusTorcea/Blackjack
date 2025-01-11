@@ -6,10 +6,26 @@
 
 // Constructorul inițializează pachetul cu toate cele 52 de cărți
 Deck::Deck() {
-    const string suits[] = { "Inima", "Romb", "Treflă", "Pică" };
+    const string suits[] = { "Inima", "Romb", "Trefla", "Pica"};
+    string cardName;
+    int value;
     for (const auto& suit : suits) {
-        for (int i = 1; i <= 13; ++i) {
-            cards.emplace_back(i, suit);  // Adaugă fiecare carte în pachet
+        for (int i = 1; i <= 14; ++i) {
+        
+            if (i == 1) {
+                cardName = "Ace";
+                value = 1;
+            }
+            else if (i == 11) {
+                cardName = "Ace";
+                value = 11;
+            }
+            else {
+                cardName = to_string(i);
+                value = i;
+            }
+      
+            cards.emplace_back(cardName, suit, value);  // Adaugă fiecare carte în pachet
         }
     }
 }

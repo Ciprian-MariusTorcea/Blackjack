@@ -13,6 +13,10 @@ public:
     void drawCard(Deck& deck);   // Trage o carte din pachet
     int getScore() const;        // Calculează și returnează scorul jucătorului
     void showHand() const;       // Afișează toate cărțile din mână și scorul curent
+    const vector<Card>& getHand() const; // Returnează mâna jucătorului
+    void printHand(const vector<Card>& hand); // Afiseaza cartea din mana
+    int calculateHandValue(); //Calculează și returnează valorea cartii din mana
+    bool hasBlackJack() const; // Verifica daca jucatorul are un BlackJack
 
 private:
     vector<Card> hand;           // Vector cu toate cărțile din mână
